@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source\Platform">
+      <UniqueIdentifier>{e9641bad-5ff8-4d59-b286-347dce3fde21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Platform\Win32">
+      <UniqueIdentifier>{780d4fa6-2d95-4a05-b7c8-a7007691a7b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\BianEngine">
+      <UniqueIdentifier>{040325e3-2c60-4acc-8f1f-09254bfaf738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Common">
+      <UniqueIdentifier>{853cd16c-8c7b-48d4-9c90-1345cc07b6b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Core">
+      <UniqueIdentifier>{8bc783da-1a98-49b5-aaa1-b0b1d960def6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BianEngine.h">
+      <Filter>Source\BianEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="IBianApplication.h">
+      <Filter>Source\Platform\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="WinEntry.h">
+      <Filter>Source\Platform\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Source\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSettings.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>Source\Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BianEngine.cpp">
+      <Filter>Source\BianEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="IBianApplication.cpp">
+      <Filter>Source\Platform\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSettings.cpp">
+      <Filter>Source\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp">
+      <Filter>Source\Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

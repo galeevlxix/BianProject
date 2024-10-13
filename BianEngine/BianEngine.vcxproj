@@ -13,13 +13,13 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c9ad246f-7bba-4c73-a8cf-318ea70dd071}</ProjectGuid>
-    <RootNamespace>BianGame</RootNamespace>
+    <ProjectGuid>{98369446-fac3-4236-b160-9e5b22e30369}</ProjectGuid>
+    <RootNamespace>BianEngine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -51,16 +51,15 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;WIN32;BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <PrecompiledHeader>Create</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\Lenovo\source\repos\BianProject\BianGame;C:\Users\Lenovo\source\repos\BianProject\BianEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>BianEngine.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>NotSet</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -70,9 +69,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;WIN32;BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Lenovo\source\repos\BianProject\BianGame;C:\Users\Lenovo\source\repos\BianProject\BianEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,25 +80,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BianApplication.cpp" />
-    <ClCompile Include="pch.cpp" />
-    <ClCompile Include="WinMain.cpp" />
+    <ClInclude Include="BianEngine.h" />
+    <ClInclude Include="GameSettings.h" />
+    <ClInclude Include="IBianApplication.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="Time.h" />
+    <ClInclude Include="WinEntry.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BianApplication.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="BianGame.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Resources\BE_ICON2.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BianEngine\BianEngine.vcxproj">
-      <Project>{98369446-fac3-4236-b160-9e5b22e30369}</Project>
-    </ProjectReference>
+    <ClCompile Include="BianEngine.cpp" />
+    <ClCompile Include="GameSettings.cpp" />
+    <ClCompile Include="IBianApplication.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

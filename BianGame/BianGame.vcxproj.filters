@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Исходные файлы">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Файлы заголовков">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Файлы ресурсов">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -16,21 +8,37 @@
     <Filter Include="Файлы ресурсов\Icons">
       <UniqueIdentifier>{199482b5-2857-4523-b5c2-399d70e40f56}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source\pch">
+      <UniqueIdentifier>{a98a1af1-2409-4bbe-8247-7dd422b7c601}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Application">
+      <UniqueIdentifier>{91c30a7e-e2b9-4eaa-8d75-62adabdb6505}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Source\pch</Filter>
+    </ClCompile>
+    <ClCompile Include="BianApplication.cpp">
+      <Filter>Source\Application</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Source\pch</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="BianApplication.h">
+      <Filter>Source\Application</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

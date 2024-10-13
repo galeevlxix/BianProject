@@ -34,14 +34,14 @@ LRESULT CALLBACK WindowProcess(HWND hWnd, UINT message, WPARAM wparam, LPARAM lp
 #pragma endregion
 
 #pragma region OnLoad
-int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
-{
-	InitializeVariables();
-	CreateWindowClass();
-	if (!InitializeWindow()) return 0;
-	MessageLoop();
-	return 0;
-}
+//int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
+//{
+//	InitializeVariables();
+//	CreateWindowClass();
+//	if (!InitializeWindow()) return 0;
+//	MessageLoop();
+//	return 0;
+//}
 
 VOID InitializeVariables()
 {
