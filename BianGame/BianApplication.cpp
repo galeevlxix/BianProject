@@ -23,10 +23,10 @@ VOID BianApplication::SetupGameSettings()
 
 VOID BianApplication::OnLoad()
 {
-	Logger::PrintLog(L"Loaded");
+	
 }
 
 VOID BianApplication::OnUpdate()
 {
-	Logger::PrintLog(L"OnProcess");
+	
 }
